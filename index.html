@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;700;800&display=swap"
+	rel="stylesheet"
+/>
+<link rel="stylesheet" href="./dist/css/style.min.css" />
+<script
+	src="https://kit.fontawesome.com/442a1b5914.js"
+	crossorigin="anonymous"
+></script>
+
+	</head>
+	<body>
+		<button class="burger-btn">
+			<i class="fa-solid fa-bars"></i>
+			<i class="fa-solid fa-xmark hide"></i>
+		</button>
+		<nav class="nav nav-mobile">
+		<a href="#home" class="nav__link">home</a>
+		<a href="#about" class="nav__link">o nas</a>
+		<a href="#offer" class="nav__link">usługi</a>
+		<a href="#contact" class="nav__link">zapisy</a>
+		<a href="#contact" class="nav__link">kontakt</a>
+</nav>
+
+<nav class="nav nav-desktop">
+	<div class="wrapper nav-desktop-content">
+		<a href="#home" class="nav__link">home</a>
+		<a href="#about" class="nav__link">o nas</a>
+		<a href="#offer" class="nav__link">usługi</a>
+		<a href="#contact" class="nav__link">zapisy</a>
+		<a href="#contact" class="nav__link">kontakt</a>
+	</div>
+</nav>
+
+		<header class="header" id="home">
+			<div class="header__content">
+				<div class="header__logo">
+					<img
+						class="header__logo-img"
+						src="./dist/img/logo-her.png"
+						alt="logo gabinetu HER MED - abstrakcyjny rysunek kobiety"
+					/>
+				</div>
+				<h1 class="header__company-name"><span class="her">HER</span> MED</h1>
+				<p class="header__text">
+					Gabinety Lekarskie • Położnictwo • Ginekologia
+				</p>
+
+				<div class="header__btns">
+					<button class="header__btn header__btn-about">
+						<a class="header__link" href="#about">poznaj nas</a>
+					</button>
+					<button class="header__btn header__btn-visit">
+						<a class="header__link" href="#contact">umów wizytę</a>
+					</button>
+				</div>
+			</div>
+			<div class="header__img">
+				<div class="header__shadow"></div>
+			</div>
+		</header>
+		<main class="main-section">
+			<section class="about-us" id="about">
+				<div class="wrapper">
+					<div class="about-us__content">
+						<div class="section__shape">
+							<img
+								src="./dist/img/about.png"
+								alt="rysunek oko na różowym tle"
+								class="section__img"
+							/>
+						</div>
+						<div class="about-us__text">
+							<h2 class="section-title">
+								Kim jesteśmy<span class="section-title__decor"> ?</span>
+							</h2>
+							<p class="section-text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+								eius necessitatibus asperiores, assumenda quaerat at repellat!
+								Et, molestiae labore totam est culpa at sunt odit nulla eveniet
+								perspiciatis magnam non cumque porro saepe quis necessitatibus
+								eaque? Est voluptas possimus. Officia fugit omnis libero
+								consequuntur est, nam autem maxime corporis explicabo dolor,
+								quasi asperiores iure culpa!
+							</p>
+						</div>
+					</div>
+					<div class="about-us__team">
+						<h2 class="section-title">
+							Nasz zespół<span class="section-title__decor"> :</span>
+						</h2>
+						<p class="section-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+							nesciunt, mollitia itaque velit voluptatum temporibus autem
+							tenetur, commodi in. Dignissimos harum, commodi quaerat placeat
+							corrupti eligendi totam!
+						</p>
+						<div class="about-us__card-box">
+							<div class="about-us__card one">
+								<button class="about-us__card-btn">
+									<i class="fa-solid fa-question"></i>
+								</button>
+								<div class="about-us__card-text">
+									<h2 class="element-title">Specjalista Ginekologii</h2>
+									<h3 class="element-text-big">lek. Karol Nowak</h3>
+									<p class="element-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corrupti consectetur dicta officia minus molestias itaque?
+									</p>
+								</div>
+							</div>
+
+							<div class="about-us__card two">
+								<button class="about-us__card-btn">
+									<i class="fa-solid fa-question"></i>
+								</button>
+								<div class="about-us__card-text">
+									<h2 class="element-title">Położna</h2>
+									<h3 class="element-text-big">mgr Maja Korzec</h3>
+									<p class="element-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corrupti consectetur dicta officia minus molestias itaque?
+									</p>
+								</div>
+							</div>
+
+							<div class="about-us__card three">
+								<button class="about-us__card-btn">
+									<i class="fa-solid fa-question"></i>
+								</button>
+								<div class="about-us__card-text">
+									<h2 class="element-title">Specjalistka Uroginekologii</h2>
+									<h3 class="element-text-big">mgr Marlena Biel</h3>
+									<p class="element-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Corrupti consectetur dicta officia minus molestias itaque?
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="offer" id="offer">
+				<div class="wrapper">
+					<div class="offer__content">
+						<div class="section__shape">
+							<img
+								src="./dist/img/service.png"
+								alt="rysunek dłonie na różowym tle"
+								class="section__img"
+							/>
+						</div>
+						<div class="offer__service">
+							<h2 class="section-title">
+								Usługi <span class="section-title__decor"> :</span>
+							</h2>
+							<p class="section-text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+								perferendis voluptatem facilis sed enim. Recusandae sit corporis
+								dignissimos est aut.
+							</p>
+							<div class="offer__service-box">
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">
+										Niepłodność
+									</h3>
+
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">
+										Ginekologia
+									</h3>
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">
+										Położnictwo
+									</h3>
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">
+										Uroginekologia
+									</h3>
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">
+										Ginekologia estetyczna
+									</h3>
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+								<div class="offer__service-card">
+									<h3 class="element-title element-title__decor">CDL</h3>
+									<ul
+										class="offer__service-list element-text-big element-text-big-gray"
+									>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+										<li class="offer__service-list-item">Lorem, ipsum.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="offer__equipment">
+							<h2 class="section-title">
+								Nowoczesny sprzęt <span class="section-title__decor"> :</span>
+							</h2>
+							<div class="offer__equipment-box">
+								<h3 class="element-title">Aparat USG MyLab™X9</h3>
+
+								<p class="section-text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Nesciunt, quia ipsum dignissimos explicabo voluptatibus animi,
+									eum eaque reprehenderit, et cum id quisquam earum nostrum
+									laborum.
+								</p>
+
+								<div class="offer__equipment-img-box">
+									<img
+										src="./dist/img/usg aparat.jpg"
+										alt="Aparat USG MyLab™X9"
+										class="offer__equipment-img offer__equipment-img-main"
+									/>
+									<img
+										src="./dist/img/usg1.jpg"
+										alt="zdjęcie usg płodu"
+										class="offer__equipment-img"
+									/>
+									<img
+										src="./dist/img/usg2.jpg"
+										alt="zdjęcie usg płodu"
+										class="offer__equipment-img"
+									/>
+									<img
+										src="./dist/img/usg3.png"
+										alt="zdjęcie usg płodu"
+										class="offer__equipment-img"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="visit" id="contact">
+				<div class="wrapper">
+					<div class="section__shape">
+						<img
+							src="./dist/img/visit.png"
+							alt="rysunek telefonu na różowym tle"
+							class="section__img visit__shape-img"
+						/>
+					</div>
+					<h2 class="section-title">
+						Tak pracujemy <span class="section-title__decor"> :</span>
+					</h2>
+					<div class="visit__content">
+						<div class="visit__info-box">
+							<div class="visit__contact">
+								<div class="visit__phone">
+									<h3 class="element-title">
+										Aby umówić wizytę, zadzwoń pod numer
+										<span class="visit__phone-number">748 230 435</span>
+									</h3>
+								</div>
+								<div class="visit__emergency">
+									<h3 class="element-title element-title__decor">
+										W razie nagłych przypadków napisz SMS
+									</h3>
+									<p class="section-text">
+										odpowiemy najszybciej jak to możliwe
+									</p>
+								</div>
+							</div>
+
+							<div class="visit__working-hours">
+								<h3 class="element-title">Godziny otwarcia</h3>
+								<div class="visit__working-hours-box">
+									<ul class="visit__working-hours-day visit__list">
+										<li class="visit__li-item">Pn.</li>
+										<li class="visit__li-item">Wt.</li>
+										<li class="visit__li-item">Śr.</li>
+										<li class="visit__li-item">Czw.</li>
+										<li class="visit__li-item">Pt.</li>
+									</ul>
+									<ul class="visit__working-hours-time visit__list">
+										<li class="visit__li-item">8 - 16</li>
+										<li class="visit__li-item">8 - 16</li>
+										<li class="visit__li-item">11 - 18</li>
+										<li class="visit__li-item">8 - 16</li>
+										<li class="visit__li-item">8 - 13</li>
+									</ul>
+								</div>
+							</div>
+							<div class="visit__addres">
+								<h3 class="element-title">Znajdziesz nas tutaj</h3>
+								<p class="section-text">ul. Nowa 1, 00 - 000 Kraków</p>
+							</div>
+						</div>
+						<div class="visit__form-box">
+							<h3 class="element-title visit__form-text">
+								Jeśli wolisz, skorzystaj z formularza kontaktowego
+							</h3>
+							<form action="" class="visit__form">
+								<div class="visit__form-row section-text">
+									<label for="name">Imię i nazwisko:</label>
+									<input type="text" id="name" />
+								</div>
+								<div class="visit__form-row section-text">
+									<label for="mail">Adres e-mail:</label>
+									<input type="email" id="mail" />
+								</div>
+								<div class="visit__form-row section-text">
+									<label for="msg">Treść wiadomości:</label>
+									<textarea id="msg" cols="27" rows="10"></textarea>
+								</div>
+								<button class="visit__form-btn">Wyślij</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__icons">
+		<i class="footer__icon fa-brands fa-twitter"></i>
+		<i class="footer__icon fa-brands fa-facebook"></i>
+		<i class="footer__icon fa-brands fa-instagram"></i>
+	</div>
+	<div class="footer__line"></div>
+	<p class="footer__bottom-text">
+		&copy; <span class="footer__year"></span> HER MED
+	</p>
+</footer>
+
+
+		<script src="./dist/js/main.min.js"></script>
+	</body>
+</html>

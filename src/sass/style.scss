@@ -1,0 +1,670 @@
+@use "./colors" as colors;
+@use "./components" as components;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-title {
+	padding: 4rem 2rem 0.5rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 2.5rem;
+	color: colors.$dark-gray;
+
+	&__decor {
+		color: colors.$dark-detail;
+	}
+}
+
+.section-text {
+	padding: 1rem 2rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: colors.$light-black;
+}
+
+.section__img {
+	width: 18rem;
+	height: 16rem;
+	border-radius: 50% 50% 50% 50% / 30% 50% 30% 60%;
+}
+
+.section__shape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5.5rem 2rem 2rem;
+	overflow: hidden;
+}
+
+.element-title {
+	padding: 1rem 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+	color: colors.$dark-gray;
+	&__decor {
+		color: colors.$dark-detail;
+	}
+}
+
+.element-text-big {
+	padding: 1rem 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: colors.$dark-detail;
+	&-gray {
+		color: colors.$dark-gray;
+		font-weight: 400;
+	}
+}
+
+.element-text {
+	padding: 1rem 2rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: colors.$light-black;
+}
+
+//NAV
+
+.burger-btn {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	padding: 1rem;
+	color: colors.$dark-detail;
+	font-size: 4rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 100;
+
+	&:hover {
+		color: colors.$light-detail;
+		text-shadow: 0px 0px 3px colors.$light-black;
+	}
+	.hide {
+		display: none;
+	}
+}
+
+.nav {
+	display: flex;
+	&-mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-color: colors.$white-gray;
+		transform: translateX(-102%);
+		transition: transform 0.3s;
+		z-index: 11;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+	&-desktop {
+		display: none;
+		z-index: 100;
+	}
+
+	&__link {
+		margin: 1rem;
+		padding: 0 2rem;
+		font-size: 2.3rem;
+		font-family: "Poppins", sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: colors.$dark-detail;
+		transition: color 0.3s;
+
+		&:hover {
+			color: colors.$light-detail;
+		}
+	}
+}
+
+//HEADER
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 2.5rem 0;
+	}
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 25rem;
+		width: 25rem;
+		background-color: colors.$white;
+		border-radius: 50%;
+		overflow: hidden;
+		box-shadow: 1px 1px 3px colors.$light-black;
+	}
+	&__logo-img {
+		height: 23rem;
+		width: 23rem;
+	}
+	&__company-name {
+		padding: 2rem 2rem 0rem;
+		color: colors.$dark-gray;
+		font-size: 5rem;
+		font-family: "Poppins", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		text-shadow: 1px 1px 2px colors.$light-black;
+
+		.her {
+			color: colors.$dark-detail;
+		}
+	}
+
+	&__text {
+		padding: 0 2rem 1rem;
+		color: colors.$mid-gray;
+		font-size: 1.8rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 500;
+	}
+
+	&__btn {
+		padding: 1rem;
+		margin: 1rem;
+		width: 15rem;
+		border-radius: 3rem;
+		border: 0.3rem solid colors.$light-detail;
+		background-color: transparent;
+		box-shadow: 0.5px 0.5px 2px colors.$light-black;
+		cursor: pointer;
+
+		&-visit {
+			background-color: colors.$light-detail;
+		}
+
+		&:hover {
+			background-color: colors.$white-gray;
+		}
+	}
+	&__link {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		color: colors.$dark-gray;
+		text-decoration: none;
+	}
+
+	&__img {
+		position: absolute;
+		background-image: url("../img/wave-small.jpg");
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		z-index: -10;
+	}
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: colors.$hero-shadow;
+	}
+}
+
+// MAIN SCETION
+
+// about
+.about-us {
+	background-color: #fbf8ff;
+	position: relative;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__text {
+		order: 2;
+	}
+
+	&__team {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__card-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem 2rem;
+	}
+
+	&__card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem;
+		width: 25rem;
+		height: 37rem;
+		background-position: center;
+		background-size: cover;
+		background-color: colors.$hero-shadow;
+		box-shadow: 0.5px 0.5px 2px colors.$light-black;
+		border-radius: 50% 50% 50% 50% / 20% 40% 20% 40%;
+		overflow: hidden;
+	}
+	&__card-btn {
+		position: absolute;
+		bottom: 5rem;
+		right: 2rem;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		border: none;
+		color: colors.$dark-gray;
+		background-color: colors.$light-detail;
+		box-shadow: 0.5px 0.5px 2px colors.$light-black;
+		cursor: pointer;
+		z-index: 10;
+
+		&:hover {
+			background-color: colors.$white-gray;
+		}
+
+		&:hover ~ .about-us__card-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			text-align: center;
+			padding: 1rem;
+			background-color: colors.$navbar;
+		}
+	}
+
+	&__card-text {
+		display: none;
+	}
+
+	.one {
+		background-image: url("../img/kn.png");
+	}
+
+	.two {
+		background-image: url("../img/mk.png");
+	}
+	.three {
+		background-image: url("../img/mb.png");
+	}
+}
+
+//offer
+.offer {
+	background-color: colors.$white;
+	position: relative;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+	&__service {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__service-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__service-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		margin: 2rem;
+		width: 24rem;
+		height: 28rem;
+		border-radius: 50% 50% 50% 50% / 20% 40% 20% 40%;
+		box-shadow: 0.5px 0.5px 2px colors.$light-detail;
+	}
+	&__service-list {
+		list-style-type: circle;
+		list-style-position: inside;
+	}
+
+	&__equipment {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__equipment-box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__equipment-img-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+	&__equipment-img {
+		padding: 1rem 2rem;
+		width: 35rem;
+		border-radius: 10%;
+		overflow: hidden;
+	}
+	&__equipment-img-main {
+		width: 100%;
+	}
+}
+
+//visit
+
+.visit {
+	position: relative;
+	background-color: colors.$light-detail;
+	&__shape-img {
+		box-shadow: 0.5px 0.5px 2px colors.$light-black;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	&__info-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		margin: 1rem;
+		background-color: colors.$white-gray;
+		border-radius: 10%;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	&__working-hours-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin: 2rem;
+		width: 20rem;
+		height: 25rem;
+		border: solid 0.1rem colors.$dark-gray;
+		border-radius: 10%;
+	}
+
+	&__list {
+		padding: 0 2rem;
+		list-style-type: none;
+	}
+
+	&__li-item {
+		padding: 0.5rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 400;
+		font-size: 1.5rem;
+		color: colors.$dark-gray;
+	}
+
+	&__phone-number {
+		white-space: nowrap;
+		font-size: 2rem;
+		text-shadow: 0px 0px 2px colors.$dark-gray;
+	}
+
+	&__addres {
+		padding-bottom: 2rem;
+	}
+
+	&__form-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		margin: 1rem;
+		border: solid 0.1rem colors.$white-gray;
+		border-radius: 10%;
+	}
+
+	&__form-text {
+		padding: 2rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+		margin: 2rem;
+		max-width: 51rem;
+		border: solid 0.1rem colors.$white-gray;
+		border-radius: 10%;
+		overflow: hidden;
+	}
+
+	&__form-row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-btn {
+		align-self: center;
+		padding: 1rem;
+		margin: 1rem;
+		width: 15rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		color: colors.$dark-gray;
+		border-radius: 3rem;
+		border: 0.3rem solid colors.$white-gray;
+		background-color: transparent;
+		box-shadow: 0.5px 0.5px 2px colors.$light-black;
+		cursor: pointer;
+		&:hover {
+			background-color: colors.$white-gray;
+		}
+	}
+}
+
+//FOOTER
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: colors.$white-gray;
+	&__icons {
+		padding: 2rem;
+	}
+	&__icon {
+		padding: 1rem;
+		font-size: 2rem;
+		color: colors.$dark-detail;
+		cursor: pointer;
+		&:hover {
+			color: colors.$light-detail;
+		}
+	}
+	&__line {
+		width: 30%;
+		height: 0.1rem;
+		border-radius: 10%;
+		background-color: colors.$dark-gray;
+	}
+
+	&__bottom-text {
+		padding: 2rem;
+		font-size: 1.5rem;
+		color: colors.$dark-detail;
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+	}
+}
+// ******************
+// media queries
+// ******************
+
+@media (width >= 768px) {
+	.burger-btn {
+		display: none;
+	}
+
+	.nav-desktop {
+		display: inline-block;
+		position: sticky;
+		top: 0;
+		width: 100%;
+		background-color: colors.$navbar;
+
+		&-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.nav__link {
+				font-size: 1.7rem;
+			}
+		}
+	}
+	.offer {
+		&__service-box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__equipment-img-box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__equipment-img {
+			width: 30%;
+		}
+		&__equipment-img-main {
+			width: 100%;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.header {
+		&__logo {
+			height: 27rem;
+			width: 27rem;
+		}
+
+		&__logo-img {
+			height: 25rem;
+			width: 25rem;
+		}
+		&__img {
+			background-image: url("../img/wave-big.jpg");
+		}
+	}
+
+	.about-us {
+		&__card-box {
+			flex-direction: row;
+		}
+
+		.one {
+			order: 2;
+			width: 27rem;
+			height: 43rem;
+		}
+
+		.two {
+			order: 1;
+		}
+
+		.three {
+			order: 3;
+		}
+	}
+
+	.visit {
+		&__content {
+			flex-direction: row;
+		}
+		&__form-box {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.header {
+		&__logo {
+			height: 29rem;
+			width: 29rem;
+		}
+		&__company-name {
+			font-size: 5.5rem;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+	}
+}
